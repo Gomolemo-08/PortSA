@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import MapView from './MapView.jsx';
 import Game from './Game.jsx';
 import { CATEGORIES, STATUSES, SEVERITIES, PROVINCES, SEED, newRef, reverseGeocode, inBounds, SA_BOUNDS } from './data.js';
@@ -166,6 +167,7 @@ export default function App() {
         </main>
       )}
       {toast && <div className="toast" role="status">{toast}</div>}
+      <SpeedInsights />
     </div>
   );
 }
